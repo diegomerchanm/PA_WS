@@ -1,0 +1,15 @@
+# .gitignore
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+*.csv
+*.json
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+notebooks/.ipynb_checkpoints/
+.idea/
+.vscode/

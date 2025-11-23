@@ -1,0 +1,25 @@
+# requirements.txt
+
+# Web Scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Data Processing
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Geolocation
+geopy>=2.4.0
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+folium>=0.15.0
+
+# Dashboard
+streamlit>=1.29.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
