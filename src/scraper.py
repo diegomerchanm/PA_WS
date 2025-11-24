@@ -195,13 +195,12 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description='Scrape Bien\'ici real estate data')
-    parser.add_argument('--city', type=str, help='City to scrape (default: all in config)')
-    parser.add_argument('--pages', type=int, help='Max pages per city')
+    parser.add_argument('--pages', type=int, help='Max pages to scrape')
     
     args = parser.parse_args()
     
     scraper = BienciScraper()
-    scraper.run(city=args.city, max_pages=args.pages)
+    scraper.run(max_pages=args.pages)
 
 
 if __name__ == '__main__':
