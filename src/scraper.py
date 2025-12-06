@@ -16,7 +16,6 @@ from config.settings import (
     HEADERS, DATA_RAW_PATH, BIENICI_RAW_FILE
 )
 
-
 class BienciScraper:
     """Scraper for Bien'ici real estate website"""
     
@@ -42,10 +41,10 @@ class BienciScraper:
             try:
                 df = pd.read_csv(filepath)
                 ids = set(df['id'].tolist())
-                print(f"ℹ️  Loaded {len(ids)} existing IDs")
+                print(f"  Loaded {len(ids)} existing IDs")
                 return ids
             except Exception as e:
-                print(f"⚠️  Error loading existing IDs: {e}")
+                print(f" Error loading existing IDs: {e}")
                 return set()
         
         return set()
@@ -86,7 +85,7 @@ class BienciScraper:
             return response.json()
         
         except requests.exceptions.RequestException as e:
-            print(f"❌ Error fetching page {page}: {e}")
+            print(f" Error fetching page {page}: {e}")
             return None
     
     def _parse_listing(self, raw_data):
@@ -126,7 +125,7 @@ class BienciScraper:
     def _save_to_csv(self):
         """Save scraped listings to CSV"""
         if not self.new_listings:
-            print("⚠️  No new listings to save")
+            print(" No new listings to save")
             return
         
         filepath = os.path.join(DATA_RAW_PATH, BIENICI_RAW_FILE)
@@ -148,7 +147,7 @@ class BienciScraper:
             index=False
         )
         
-        print(f"✅ {len(self.new_listings)} new listings saved to {filepath}")
+        print(f"{len(self.new_listings)} new listings saved to {filepath}")
     
     def run(self, max_pages=None):
         """Run the scraper"""
@@ -164,13 +163,13 @@ class BienciScraper:
             data = self._fetch_page(None, page)
             
             if not data or 'realEstateAds' not in data:
-                print(f"\n⚠️  No data on page {page}, stopping")
+                print(f"\n No data on page {page}, stopping")
                 break
             
             ads = data.get('realEstateAds', [])
             
             if not ads:
-                print(f"\nℹ️  No more listings on page {page}")
+                print(f"\n No more listings on page {page}")
                 break
             
             # Parse each listing
@@ -184,9 +183,9 @@ class BienciScraper:
         self._save_to_csv()
         
         print("\n" + "=" * 50)
-        print(f"🎉 Scraping complete!")
-        print(f"📊 Total new listings: {len(self.new_listings)}")
-        print(f"📁 File: {os.path.join(DATA_RAW_PATH, BIENICI_RAW_FILE)}")
+        print(f"Scraping complete!")
+        print(f"Total new listings: {len(self.new_listings)}")
+        print(f" File: {os.path.join(DATA_RAW_PATH, BIENICI_RAW_FILE)}")
         print("=" * 50)
 
 
