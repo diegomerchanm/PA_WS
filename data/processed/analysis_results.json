@@ -1,0 +1,894 @@
+{
+  "price_distribution": {
+    "mean": 974.100340425532,
+    "median": 850.0,
+    "mode": 1500.0,
+    "std": 562.0308415761448,
+    "min": 332.0,
+    "max": 5500.0,
+    "percentiles": {
+      "25": 627.575,
+      "50": 850.0,
+      "75": 1164.675,
+      "90": 1596.0,
+      "95": 1802.9999999999998,
+      "99": 3173.199999999995
+    },
+    "iqr": 537.0999999999999,
+    "coefficient_variation": 0.5769742789850826,
+    "skewness": 3.482479211315656,
+    "kurtosis": 21.363893955769186
+  },
+  "price_per_m2": {
+    "mean": 13.627574468085108,
+    "median": 11.76,
+    "std": 7.505453833982738,
+    "min": 3.6,
+    "max": 45.43,
+    "percentiles": {
+      "25": 9.175,
+      "50": 11.76,
+      "75": 14.83,
+      "90": 22.677999999999997
+    }
+  },
+  "surface_distribution": {
+    "mean": 82.67051063829787,
+    "median": 71.95,
+    "std": 45.64732689577328,
+    "min": 10.05,
+    "max": 287.33,
+    "by_property_type": {
+      "flat": {
+        "mean": 66.35000000000001,
+        "median": 61.915000000000006,
+        "count": 172
+      },
+      "house": {
+        "mean": 127.22809523809524,
+        "median": 115.0,
+        "count": 63
+      }
+    }
+  },
+  "correlations": {
+    "price_vs_surface": 0.5048386437175094,
+    "price_vs_rooms": 0.4613571806732489,
+    "price_vs_floor": 0.024407336541741553,
+    "surface_vs_rooms": 0.8536583305072611,
+    "matrix": {
+      "price": {
+        "price": 1.0,
+        "surface": 0.5048386437175094,
+        "rooms": 0.4613571806732489,
+        "bedrooms": 0.4620640880592369,
+        "price_per_m2": 0.3560438959773845,
+        "floor": 0.024407336541741553
+      },
+      "surface": {
+        "price": 0.5048386437175094,
+        "surface": 1.0,
+        "rooms": 0.8536583305072611,
+        "bedrooms": 0.8415433548428772,
+        "price_per_m2": -0.4737186007688012,
+        "floor": 0.20457824212501077
+      },
+      "rooms": {
+        "price": 0.4613571806732489,
+        "surface": 0.8536583305072611,
+        "rooms": 1.0,
+        "bedrooms": 0.9478340003376154,
+        "price_per_m2": -0.42351945445648564,
+        "floor": 0.24416562927814423
+      },
+      "bedrooms": {
+        "price": 0.4620640880592369,
+        "surface": 0.8415433548428772,
+        "rooms": 0.9478340003376154,
+        "bedrooms": 1.0,
+        "price_per_m2": -0.4115260343052474,
+        "floor": 0.22812255059781625
+      },
+      "price_per_m2": {
+        "price": 0.3560438959773845,
+        "surface": -0.4737186007688012,
+        "rooms": -0.42351945445648564,
+        "bedrooms": -0.4115260343052474,
+        "price_per_m2": 1.0,
+        "floor": -0.21699972659698616
+      },
+      "floor": {
+        "price": 0.024407336541741553,
+        "surface": 0.20457824212501077,
+        "rooms": 0.24416562927814423,
+        "bedrooms": 0.22812255059781625,
+        "price_per_m2": -0.21699972659698616,
+        "floor": 1.0
+      }
+    }
+  },
+  "city_analysis": {
+    "top_10_price": [
+      {
+        "city": "Roquebrune-Cap-Martin",
+        "avg_price": 5500.0,
+        "median_price": 5500.0,
+        "count": 1
+      },
+      {
+        "city": "Paris 14e",
+        "avg_price": 3800.0,
+        "median_price": 3800.0,
+        "count": 1
+      },
+      {
+        "city": "Châtillon",
+        "avg_price": 3690.0,
+        "median_price": 3690.0,
+        "count": 1
+      },
+      {
+        "city": "Aulnois-sur-Seille",
+        "avg_price": 2000.0,
+        "median_price": 2000.0,
+        "count": 1
+      },
+      {
+        "city": "Antibes",
+        "avg_price": 1990.0,
+        "median_price": 1990.0,
+        "count": 1
+      },
+      {
+        "city": "Bègles",
+        "avg_price": 1990.0,
+        "median_price": 1990.0,
+        "count": 1
+      },
+      {
+        "city": "Le Chesnay-Rocquencourt",
+        "avg_price": 1990.0,
+        "median_price": 1990.0,
+        "count": 1
+      },
+      {
+        "city": "La Rochelle",
+        "avg_price": 1900.0,
+        "median_price": 1900.0,
+        "count": 1
+      },
+      {
+        "city": "Versailles",
+        "avg_price": 1897.5,
+        "median_price": 1897.5,
+        "count": 2
+      },
+      {
+        "city": "Guérande",
+        "avg_price": 1810.0,
+        "median_price": 1810.0,
+        "count": 1
+      }
+    ],
+    "top_10_price_per_m2": [
+      {
+        "city": "Paris 6e",
+        "avg_price_m2": 45.43,
+        "median_price_m2": 45.43,
+        "count": 1
+      },
+      {
+        "city": "Guyancourt",
+        "avg_price_m2": 39.51,
+        "median_price_m2": 39.51,
+        "count": 1
+      },
+      {
+        "city": "Paris 14e",
+        "avg_price_m2": 37.25,
+        "median_price_m2": 37.25,
+        "count": 1
+      },
+      {
+        "city": "La Garenne-Colombes",
+        "avg_price_m2": 36.92,
+        "median_price_m2": 36.92,
+        "count": 1
+      },
+      {
+        "city": "Paris 15e",
+        "avg_price_m2": 36.42,
+        "median_price_m2": 36.42,
+        "count": 1
+      },
+      {
+        "city": "Périgueux",
+        "avg_price_m2": 35.09,
+        "median_price_m2": 39.53,
+        "count": 5
+      },
+      {
+        "city": "Colombes",
+        "avg_price_m2": 33.97,
+        "median_price_m2": 33.97,
+        "count": 1
+      },
+      {
+        "city": "Courbevoie",
+        "avg_price_m2": 33.9,
+        "median_price_m2": 33.9,
+        "count": 1
+      },
+      {
+        "city": "Mandelieu-la-Napoule",
+        "avg_price_m2": 32.94,
+        "median_price_m2": 32.94,
+        "count": 1
+      },
+      {
+        "city": "Roquebrune-Cap-Martin",
+        "avg_price_m2": 30.56,
+        "median_price_m2": 30.56,
+        "count": 1
+      }
+    ],
+    "top_10_volume": [
+      {
+        "city": "Saint-Étienne",
+        "count": 24,
+        "avg_price": 684.62
+      },
+      {
+        "city": "Roanne",
+        "count": 18,
+        "avg_price": 563.83
+      },
+      {
+        "city": "Le Mans",
+        "count": 6,
+        "avg_price": 895.0
+      },
+      {
+        "city": "Grenoble",
+        "count": 5,
+        "avg_price": 703.51
+      },
+      {
+        "city": "Laval",
+        "count": 5,
+        "avg_price": 545.2
+      },
+      {
+        "city": "Le Coteau",
+        "count": 5,
+        "avg_price": 435.38
+      },
+      {
+        "city": "Périgueux",
+        "count": 5,
+        "avg_price": 749.0
+      },
+      {
+        "city": "Sassenage",
+        "count": 5,
+        "avg_price": 796.99
+      },
+      {
+        "city": "Saint-Priest-en-Jarez",
+        "count": 4,
+        "avg_price": 875.25
+      },
+      {
+        "city": "Aix-les-Bains",
+        "count": 3,
+        "avg_price": 933.33
+      }
+    ]
+  },
+  "region_analysis": {
+    "Auvergne-Rhône-Alpes": {
+      "avg_price": 720.44,
+      "median_price": 647.5,
+      "avg_price_m2": 11.91,
+      "avg_surface": 67.23,
+      "count": 86,
+      "market_share": 36.59574468085106
+    },
+    "Nouvelle-Aquitaine": {
+      "avg_price": 1063.44,
+      "median_price": 926.0,
+      "avg_price_m2": 14.89,
+      "avg_surface": 99.95,
+      "count": 30,
+      "market_share": 12.76595744680851
+    },
+    "Occitanie": {
+      "avg_price": 1120.48,
+      "median_price": 1000.0,
+      "avg_price_m2": 12.56,
+      "avg_surface": 95.84,
+      "count": 17,
+      "market_share": 7.234042553191489
+    },
+    "Other": {
+      "avg_price": 1082.58,
+      "median_price": 895.0,
+      "avg_price_m2": 12.63,
+      "avg_surface": 96.01,
+      "count": 62,
+      "market_share": 26.382978723404253
+    },
+    "Pays de la Loire": {
+      "avg_price": 890.87,
+      "median_price": 765.0,
+      "avg_price_m2": 11.56,
+      "avg_surface": 83.09,
+      "count": 22,
+      "market_share": 9.361702127659575
+    },
+    "Provence-Alpes-Côte d'Azur": {
+      "avg_price": 1050.0,
+      "median_price": 1050.0,
+      "avg_price_m2": 16.95,
+      "avg_surface": 61.95,
+      "count": 1,
+      "market_share": 0.425531914893617
+    },
+    "Île-de-France": {
+      "avg_price": 1660.9,
+      "median_price": 1500.0,
+      "avg_price_m2": 27.26,
+      "avg_surface": 69.13,
+      "count": 17,
+      "market_share": 7.234042553191489
+    }
+  },
+  "property_type_comparison": {
+    "flat": {
+      "avg_price": 874.44,
+      "median_price": 790.0,
+      "avg_price_m2": 14.9,
+      "avg_surface": 66.35,
+      "avg_rooms": 2.91,
+      "count": 172,
+      "market_share": 73.19148936170212
+    },
+    "house": {
+      "avg_price": 1246.19,
+      "median_price": 1115.0,
+      "avg_price_m2": 10.15,
+      "avg_surface": 127.23,
+      "avg_rooms": 4.86,
+      "count": 63,
+      "market_share": 26.80851063829787
+    }
+  },
+  "price_segmentation": {
+    "Economic": {
+      "avg_price": 487.38,
+      "avg_price_m2": 13.62,
+      "avg_surface": 44.45,
+      "avg_rooms": 2.02,
+      "count": 55,
+      "market_share": 23.404255319148938
+    },
+    "Medium": {
+      "avg_price": 876.01,
+      "avg_price_m2": 12.5,
+      "avg_surface": 81.41,
+      "avg_rooms": 3.56,
+      "count": 127,
+      "market_share": 54.04255319148936
+    },
+    "Premium": {
+      "avg_price": 1557.29,
+      "avg_price_m2": 15.51,
+      "avg_surface": 123.93,
+      "avg_rooms": 4.58,
+      "count": 50,
+      "market_share": 21.27659574468085
+    },
+    "Luxury": {
+      "avg_price": 4330.0,
+      "avg_price_m2": 30.06,
+      "avg_surface": 149.0,
+      "avg_rooms": 4.67,
+      "count": 3,
+      "market_share": 1.276595744680851
+    }
+  },
+  "rooms_segmentation": {
+    "1_rooms": {
+      "avg_price": 565.1,
+      "median_price": 470.0,
+      "avg_price_m2": 24.58,
+      "avg_surface": 25.65,
+      "count": 23,
+      "price_per_room": 565.1
+    },
+    "2_rooms": {
+      "avg_price": 699.53,
+      "median_price": 601.0,
+      "avg_price_m2": 15.61,
+      "avg_surface": 47.06,
+      "count": 43,
+      "price_per_room": 349.765
+    },
+    "3_rooms": {
+      "avg_price": 826.14,
+      "median_price": 750.0,
+      "avg_price_m2": 12.65,
+      "avg_surface": 66.38,
+      "count": 59,
+      "price_per_room": 275.38
+    },
+    "4_rooms": {
+      "avg_price": 1151.15,
+      "median_price": 1015.0,
+      "avg_price_m2": 11.89,
+      "avg_surface": 100.37,
+      "count": 60,
+      "price_per_room": 287.7875
+    },
+    "5_rooms": {
+      "avg_price": 1364.41,
+      "median_price": 1115.0,
+      "avg_price_m2": 10.83,
+      "avg_surface": 124.75,
+      "count": 33,
+      "price_per_room": 272.882
+    },
+    "6_rooms": {
+      "avg_price": 1307.97,
+      "median_price": 1370.0,
+      "avg_price_m2": 9.19,
+      "avg_surface": 147.92,
+      "count": 10,
+      "price_per_room": 217.995
+    },
+    "7_rooms": {
+      "avg_price": 1292.5,
+      "median_price": 1155.0,
+      "avg_price_m2": 8.55,
+      "avg_surface": 163.77,
+      "count": 4,
+      "price_per_room": 184.64285714285714
+    },
+    "8_rooms": {
+      "avg_price": 1500.0,
+      "median_price": 1500.0,
+      "avg_price_m2": 8.34,
+      "avg_surface": 179.82,
+      "count": 1,
+      "price_per_room": 187.5
+    },
+    "9_rooms": {
+      "avg_price": 1500.0,
+      "median_price": 1500.0,
+      "avg_price_m2": 7.14,
+      "avg_surface": 210.0,
+      "count": 1,
+      "price_per_room": 166.66666666666666
+    },
+    "10_rooms": {
+      "avg_price": 1750.0,
+      "median_price": 1750.0,
+      "avg_price_m2": 7.45,
+      "avg_surface": 235.0,
+      "count": 1,
+      "price_per_room": 175.0
+    }
+  },
+  "amenities_impact": {
+    "elevator": {
+      "with_elevator": 965.8192647058825,
+      "without_elevator": 977.4722754491017,
+      "price_premium_%": -1.192157674023575
+    },
+    "furnished": {
+      "furnished": 1098.65,
+      "unfurnished": 921.2610909090909,
+      "price_premium_%": 19.25500933897726
+    },
+    "parking": {
+      "with_parking": null,
+      "without_parking": 974.100340425532,
+      "price_premium_%": null
+    }
+  },
+  "best_value_properties": [
+    {
+      "city": "Ribemont",
+      "price": 870.0,
+      "surface": 241.53,
+      "rooms": 7,
+      "price_per_m2": 3.6,
+      "value_score": 1.9433448275862069,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-41822747600029-GES32640838-934"
+    },
+    {
+      "city": "Poitiers",
+      "price": 1500.0,
+      "surface": 210.0,
+      "rooms": 9,
+      "price_per_m2": 7.14,
+      "value_score": 1.26,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-32708047900014-GES05020001-769"
+    },
+    {
+      "city": "Tours",
+      "price": 1750.0,
+      "surface": 235.0,
+      "rooms": 10,
+      "price_per_m2": 7.45,
+      "value_score": 1.170204081632653,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-Ag370014-GES83960001-191"
+    },
+    {
+      "city": "Châteauroux",
+      "price": 1500.0,
+      "surface": 287.33,
+      "rooms": 6,
+      "price_per_m2": 5.22,
+      "value_score": 1.1493200000000001,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-5058-LMAI102755"
+    },
+    {
+      "city": "Agen",
+      "price": 890.0,
+      "surface": 173.39,
+      "rooms": 5,
+      "price_per_m2": 5.13,
+      "value_score": 1.061660775154652,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-1280-GES64780002-45"
+    },
+    {
+      "city": "Essigny-le-Grand",
+      "price": 850.0,
+      "surface": 124.84,
+      "rooms": 6,
+      "price_per_m2": 6.81,
+      "value_score": 0.8812235294117646,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-41822747600029-GES10520001-934"
+    },
+    {
+      "city": "Dieppe",
+      "price": 910.0,
+      "surface": 114.15,
+      "rooms": 7,
+      "price_per_m2": 7.97,
+      "value_score": 0.8780769230769232,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-87874882100021-GES21150001-776"
+    },
+    {
+      "city": "Coslédaà-Lube-Boast",
+      "price": 1010.0,
+      "surface": 172.46,
+      "rooms": 5,
+      "price_per_m2": 5.86,
+      "value_score": 0.8537623762376239,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-5023-GES22080001-97"
+    },
+    {
+      "city": "Brioude",
+      "price": 732.0,
+      "surface": 124.07,
+      "rooms": 5,
+      "price_per_m2": 5.9,
+      "value_score": 0.8474726775956283,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-42358523100016-GES76170001-971"
+    },
+    {
+      "city": "Laguenne-sur-Avalouze",
+      "price": 754.0,
+      "surface": 105.84,
+      "rooms": 6,
+      "price_per_m2": 7.12,
+      "value_score": 0.8422281167108753,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-899463483-GES01180001-859"
+    },
+    {
+      "city": "Saint-Maurice-les-Brousses",
+      "price": 897.44,
+      "surface": 147.0,
+      "rooms": 5,
+      "price_per_m2": 6.11,
+      "value_score": 0.8189962560171153,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-1265-GES14680001-69"
+    },
+    {
+      "city": "Chierry",
+      "price": 1400.0,
+      "surface": 149.41,
+      "rooms": 7,
+      "price_per_m2": 9.37,
+      "value_score": 0.7470499999999999,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-48298041400270-GES40320057-700"
+    },
+    {
+      "city": "Saint-Ferréol-d'Auroure",
+      "price": 650.0,
+      "surface": 95.24,
+      "rooms": 5,
+      "price_per_m2": 6.82,
+      "value_score": 0.7326153846153846,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-12454-GES82040002-696"
+    },
+    {
+      "city": "Montauban",
+      "price": 1330.0,
+      "surface": 182.35,
+      "rooms": 5,
+      "price_per_m2": 7.29,
+      "value_score": 0.6855263157894737,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-04-GES03163120-552"
+    },
+    {
+      "city": "Carcassonne",
+      "price": 1000.0,
+      "surface": 143.7,
+      "rooms": 5,
+      "price_per_m2": 6.96,
+      "value_score": 0.6646125,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-53-GES40200006-512"
+    },
+    {
+      "city": "Besny-et-Loizy",
+      "price": 750.0,
+      "surface": 98.23,
+      "rooms": 5,
+      "price_per_m2": 7.64,
+      "value_score": 0.6548666666666667,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-482980414000395-GES81020936-701"
+    },
+    {
+      "city": "Varennes-lès-Mâcon",
+      "price": 1115.0,
+      "surface": 144.68,
+      "rooms": 5,
+      "price_per_m2": 7.71,
+      "value_score": 0.6487892376681615,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-5046-GES53760001-206"
+    },
+    {
+      "city": "Saint-Quentin",
+      "price": 780.0,
+      "surface": 110.56,
+      "rooms": 5,
+      "price_per_m2": 7.05,
+      "value_score": 0.6333030900723208,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-41822747600029-GES08290001-934"
+    },
+    {
+      "city": "Tours",
+      "price": 1300.0,
+      "surface": 116.0,
+      "rooms": 6,
+      "price_per_m2": 11.21,
+      "value_score": 0.6280473372781066,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-Ag370015-GES45960001-727"
+    },
+    {
+      "city": "Perreux",
+      "price": 650.0,
+      "surface": 88.5,
+      "rooms": 4,
+      "price_per_m2": 7.34,
+      "value_score": 0.6053609467455622,
+      "url": "https://www.bienici.com/annonce/citya-immobilier-38792244600035-GES43070030-671"
+    }
+  ],
+  "outliers": {
+    "most_expensive": [
+      {
+        "city": "Roquebrune-Cap-Martin",
+        "price": 5500.0,
+        "surface": 180.0,
+        "price_per_m2": 30.56,
+        "url": "https://www.bienici.com/annonce/century-21-202_2253_2981"
+      },
+      {
+        "city": "Paris 14e",
+        "price": 3800.0,
+        "surface": 102.0,
+        "price_per_m2": 37.25,
+        "url": "https://www.bienici.com/annonce/ag751877-501692828"
+      },
+      {
+        "city": "Châtillon",
+        "price": 3690.0,
+        "surface": 165.0,
+        "price_per_m2": 22.36,
+        "url": "https://www.bienici.com/annonce/ag751877-482269124"
+      },
+      {
+        "city": "Versailles",
+        "price": 2170.0,
+        "surface": 76.63,
+        "price_per_m2": 28.32,
+        "url": "https://www.bienici.com/annonce/hektor-immobilierenotredame-3661"
+      },
+      {
+        "city": "Aulnois-sur-Seille",
+        "price": 2000.0,
+        "surface": 266.99,
+        "price_per_m2": 7.49,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-03-GES30280001-541"
+      },
+      {
+        "city": "Bègles",
+        "price": 1990.0,
+        "surface": 150.0,
+        "price_per_m2": 13.27,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-0398-LMAI102990"
+      },
+      {
+        "city": "Le Chesnay-Rocquencourt",
+        "price": 1990.0,
+        "surface": 96.43,
+        "price_per_m2": 20.64,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-5056-GES00302061-207"
+      },
+      {
+        "city": "Antibes",
+        "price": 1990.0,
+        "surface": 78.87,
+        "price_per_m2": 25.23,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-1171-GES01031467-74"
+      },
+      {
+        "city": "Metz",
+        "price": 1950.0,
+        "surface": 131.0,
+        "price_per_m2": 14.89,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-36880079300011-GES40950007-998"
+      },
+      {
+        "city": "Périgueux",
+        "price": 1920.0,
+        "surface": 113.0,
+        "price_per_m2": 16.99,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-3718-GES40870002-68"
+      }
+    ],
+    "highest_price_per_m2": [
+      {
+        "city": "Paris 6e",
+        "price": 1590.0,
+        "surface": 35.0,
+        "price_per_m2": 45.43,
+        "url": "https://www.bienici.com/annonce/ag751877-501324737"
+      },
+      {
+        "city": "Périgueux",
+        "price": 445.0,
+        "surface": 10.05,
+        "price_per_m2": 44.28,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-3718-GES20140005-68"
+      },
+      {
+        "city": "Périgueux",
+        "price": 460.0,
+        "surface": 10.58,
+        "price_per_m2": 43.48,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-3718-GES20140003-68"
+      },
+      {
+        "city": "Périgueux",
+        "price": 470.0,
+        "surface": 11.89,
+        "price_per_m2": 39.53,
+        "url": "https://www.bienici.com/annonce/citya-immobilier-3718-GES20150001-68"
+      },
+      {
+        "city": "Guyancourt",
+        "price": 823.0,
+        "surface": 20.83,
+        "price_per_m2": 39.51,
+        "url": "https://www.bienici.com/annonce/hektor-immobilierenotredame-3682"
+      },
+      {
+        "city": "Paris 14e",
+        "price": 3800.0,
+        "surface": 102.0,
+        "price_per_m2": 37.25,
+        "url": "https://www.bienici.com/annonce/ag751877-501692828"
+      },
+      {
+        "city": "La Garenne-Colombes",
+        "price": 1200.0,
+        "surface": 32.5,
+        "price_per_m2": 36.92,
+        "url": "https://www.bienici.com/annonce/immo-facile-59494378"
+      },
+      {
+        "city": "Paris 15e",
+        "price": 1639.0,
+        "surface": 45.0,
+        "price_per_m2": 36.42,
+        "url": "https://www.bienici.com/annonce/ag751877-494734634"
+      },
+      {
+        "city": "Nice",
+        "price": 737.0,
+        "surface": 21.23,
+        "price_per_m2": 34.72,
+        "url": "https://www.bienici.com/annonce/apimo-85251018"
+      },
+      {
+        "city": "Colombes",
+        "price": 1070.0,
+        "surface": 31.5,
+        "price_per_m2": 33.97,
+        "url": "https://www.bienici.com/annonce/immo-facile-59647747"
+      }
+    ],
+    "suspiciously_cheap_count": 0
+  },
+  "clusters": {
+    "cluster_0": {
+      "name": "Standard Rentals",
+      "avg_price": 736.24,
+      "avg_surface": 63.81,
+      "avg_rooms": 2.87,
+      "avg_price_m2": 11.84,
+      "typical_city": "Saint-Étienne",
+      "count": 131
+    },
+    "cluster_1": {
+      "name": "Family Homes",
+      "avg_price": 1257.29,
+      "avg_surface": 133.15,
+      "avg_rooms": 5.07,
+      "avg_price_m2": 9.89,
+      "typical_city": "Saint-Étienne",
+      "count": 72
+    },
+    "cluster_2": {
+      "name": "Luxury Properties",
+      "avg_price": 4330.0,
+      "avg_surface": 149.0,
+      "avg_rooms": 4.67,
+      "avg_price_m2": 30.06,
+      "typical_city": "Châtillon",
+      "count": 3
+    },
+    "cluster_3": {
+      "name": "Urban Studios",
+      "avg_price": 998.3,
+      "avg_surface": 35.68,
+      "avg_rooms": 1.76,
+      "avg_price_m2": 29.29,
+      "typical_city": "Périgueux",
+      "count": 29
+    }
+  },
+  "paris_vs_rest": {
+    "paris": {
+      "count": 3,
+      "market_share_%": 1.276595744680851,
+      "avg_price": 2343.0,
+      "median_price": 1639.0,
+      "avg_price_m2": 39.699999999999996,
+      "avg_surface": 60.666666666666664
+    },
+    "rest_of_france": {
+      "count": 232,
+      "market_share_%": 98.72340425531915,
+      "avg_price": 956.399051724138,
+      "median_price": 850.0,
+      "avg_price_m2": 13.29043103448276,
+      "avg_surface": 82.95504310344828
+    },
+    "comparison": {
+      "price_difference_%": 144.98142232326373,
+      "price_m2_difference_%": 198.71115464198374,
+      "surface_difference_%": -26.86801863147381
+    }
+  },
+  "metadata": {
+    "total_properties": 235,
+    "analysis_date": "2025-12-07 00:06:16",
+    "data_source": "bienici.com"
+  }
+}
