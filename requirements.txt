@@ -1,5 +1,9 @@
 # requirements.txt
 
+# Python 
+Python>=9.11
+Python>9.13
+
 # Web Scraping
 requests>=2.31.0
 beautifulsoup4>=4.12.0
