@@ -25,21 +25,21 @@ class RealEstateAnalyzer:
         
     def load_data(self):
         """Load clean data"""
-        print("📂 Loading clean data...")
+        print(" Loading clean data...")
         
         if not os.path.exists(self.data_file):
-            print(f"❌ File not found: {self.data_file}")
+            print(f" File not found: {self.data_file}")
             return False
         
         self.df = pd.read_csv(self.data_file)
-        print(f"✅ Loaded {len(self.df)} records")
+        print(f" Loaded {len(self.df)} records")
         return True
     
     # ==================== LEVEL 1: DESCRIPTIVE STATISTICS ====================
     
     def analyze_price_distribution(self):
         """Comprehensive price distribution analysis"""
-        print("\n💰 Analyzing price distribution...")
+        print("\n Analyzing price distribution...")
         
         prices = self.df['price']
         
@@ -70,7 +70,7 @@ class RealEstateAnalyzer:
     
     def analyze_price_per_m2(self):
         """Price per m² analysis"""
-        print("\n📐 Analyzing price per m²...")
+        print("\n Analyzing price per m²...")
         
         price_m2 = self.df['price_per_m2']
         
@@ -93,7 +93,7 @@ class RealEstateAnalyzer:
     
     def analyze_surface_distribution(self):
         """Surface area analysis"""
-        print("\n🏠 Analyzing surface areas...")
+        print("\n Analyzing surface areas...")
         
         surface = self.df['surface']
         
@@ -121,7 +121,7 @@ class RealEstateAnalyzer:
     
     def analyze_correlations(self):
         """Correlation analysis"""
-        print("\n🔗 Analyzing correlations...")
+        print("\n Analyzing correlations...")
         
         # Select numeric columns
         numeric_cols = ['price', 'surface', 'rooms', 'bedrooms', 'price_per_m2', 'floor']
@@ -145,7 +145,7 @@ class RealEstateAnalyzer:
     
     def analyze_by_city(self):
         """City-level analysis"""
-        print("\n🏙️  Analyzing by city...")
+        print("\n Analyzing by city...")
         
         city_stats = self.df.groupby('city').agg({
             'price': ['mean', 'median', 'count'],
@@ -195,7 +195,7 @@ class RealEstateAnalyzer:
     
     def analyze_by_region(self):
         """Region-level analysis"""
-        print("\n🗺️  Analyzing by region...")
+        print("\n Analyzing by region...")
         
         region_stats = self.df.groupby('region').agg({
             'price': ['mean', 'median', 'count'],
@@ -219,7 +219,7 @@ class RealEstateAnalyzer:
     
     def compare_property_types(self):
         """Compare flats vs houses"""
-        print("\n🏘️  Comparing property types...")
+        print("\n Comparing property types...")
         
         type_stats = self.df.groupby('property_type').agg({
             'price': ['mean', 'median', 'count'],
@@ -248,7 +248,7 @@ class RealEstateAnalyzer:
     
     def segment_by_price_range(self):
         """Segment properties by price range"""
-        print("\n💎 Segmenting by price range...")
+        print("\n Segmenting by price range...")
         
         # Define segments
         self.df['price_segment'] = pd.cut(
@@ -304,7 +304,7 @@ class RealEstateAnalyzer:
     
     def analyze_amenities_impact(self):
         """Analyze impact of amenities on price"""
-        print("\n🎯 Analyzing amenities impact...")
+        print("\n Analyzing amenities impact...")
         
         # Elevator impact
         elevator_stats = self.df.groupby('has_elevator')['price'].agg(['mean', 'count'])
@@ -340,7 +340,7 @@ class RealEstateAnalyzer:
     
     def calculate_value_score(self):
         """Calculate custom value score"""
-        print("\n⭐ Calculating value scores...")
+        print("\n Calculating value scores...")
         
         # Normalize factors
         avg_price_by_city = self.df.groupby('city')['price'].transform('mean')
@@ -419,7 +419,7 @@ class RealEstateAnalyzer:
     
     def cluster_properties(self):
         """K-means clustering of properties"""
-        print("\n🎨 Clustering properties...")
+        print("\n Clustering properties...")
         
         # Prepare features for clustering
         features = self.df[['price', 'surface', 'rooms', 'price_per_m2']].dropna()
@@ -512,7 +512,7 @@ class RealEstateAnalyzer:
     
     def save_results(self):
         """Save all results to JSON"""
-        print("\n💾 Saving results...")
+        print("\n Saving results...")
         
         # Add metadata
         self.results['metadata'] = {
@@ -529,20 +529,20 @@ class RealEstateAnalyzer:
     def print_summary(self):
         """Print executive summary"""
         print("\n" + "=" * 70)
-        print("📊 EXECUTIVE SUMMARY")
+        print(" EXECUTIVE SUMMARY")
         print("=" * 70)
         
-        print(f"\n📈 Market Overview:")
+        print(f"\n Market Overview:")
         print(f"   Total Properties: {len(self.df):,}")
         print(f"   Average Price: {self.df['price'].mean():.2f}€")
         print(f"   Median Price: {self.df['price'].median():.2f}€")
         print(f"   Average €/m²: {self.df['price_per_m2'].mean():.2f}€")
         
-        print(f"\n🏆 Top 3 Most Expensive Cities:")
+        print(f"\n Top 3 Most Expensive Cities:")
         for i, city_data in enumerate(self.results['city_analysis']['top_10_price'][:3], 1):
             print(f"   {i}. {city_data['city']}: {city_data['avg_price']:.2f}€")
         
-        print(f"\n🎯 Market Segments:")
+        print(f"\n Market Segments:")
         for segment, data in self.results['price_segmentation'].items():
             print(f"   {segment}: {data['market_share']:.1f}% ({data['count']} properties)")
         
@@ -550,7 +550,7 @@ class RealEstateAnalyzer:
     
     def run(self):
         """Execute complete analysis pipeline"""
-        print("🚀 Starting EPIC Real Estate Analysis")
+        print(" Starting EPIC Real Estate Analysis")
         print("=" * 70)
         
         # Load data
@@ -585,7 +585,7 @@ class RealEstateAnalyzer:
         self.save_results()
         self.print_summary()
         
-        print("\n🎉 Analysis complete!")
+        print("\n Analysis complete!")
 
 
 def main():
