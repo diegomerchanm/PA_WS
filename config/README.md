@@ -1,16 +1,46 @@
-# Proyecto Immobilier Scraper
+# PA_WS - Analyse Marché Immobilier
 
-## Instalación
-1. Clonar el repositorio
-2. Crear venv con Python 3.11: `py -3.11 -m venv venv`
-3. Activar: `venv\Scripts\activate`
-4. Instalar dependencias: `pip install -r requirements.txt`
+Projet d'analyse du marché immobilier français par web scraping (API Bien'ici).
 
-## Estructura
-- `src/scraper.py` - Web scraping
-- `src/cleaner.py` - Limpieza de datos
-- `src/analyzer.py` - Análisis estadístico
-- `src/visualizer.py` - Visualizaciones
-- `dashboard/app.py` - Streamlit dashboard
-- `data/raw/` - Datos crudos
-- `data/processed/` - Datos limpios
+## Installation
+
+git clone [URL]
+cd PA_WS
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+## Exécution
+
+python src/scraper.py --pages 50
+python src/cleaner.py
+python src/analyzer.py
+python src/price_model.py
+streamlit run dashboard/app.py
+
+## Structure
+
+PA_WS/
+├── config/          # Configuration
+├── data/            # Données (raw + processed)
+├── src/             # Scripts pipeline
+├── dashboard/       # Application Streamlit
+└── notebooks/       # Exploration
+
+## Scripts principaux
+
+- scraper.py : Collecte données via API
+- cleaner.py : Nettoyage et géocodage
+- analyzer.py : Analyses statistiques
+- price_model.py : Modèle prédictif (RandomForest)
+- dashboard/app.py : Interface interactive
+
+## Technologies
+
+pandas, numpy, scikit-learn, streamlit, folium, geopy
+
+## Auteurs
+
+Diego Merchan, Perveena Sivayanama
+Master Data Analytics - Paris 1 Panthéon-Sorbonne
+2025-2026
